@@ -1,7 +1,8 @@
 
 //global variables
-var topics = ['happy', 'sad', 'angry', 'silly', 'nice', 'funny', 'crazy', 'mean', 'annoying'];
+var topics = ['happy', 'sad', 'angry', 'silly', 'nice', 'sarcastic', 'funny', 'crazy', 'mean', 'annoying'];
 var btn;
+var logo = '<img src="assets/images/logo.gif">';
 
 //dynamically create buttons from the topics array
 for (var i = 0; i < topics.length; i++) {
@@ -17,7 +18,10 @@ for (var i = 0; i < topics.length; i++) {
     $(document).on("click", '.giphyButton', function() {
       console.log('giphyButton click is working');
       $('.instructionsDiv').html('<h4>Click on an image to play or pause the gif<h4>');
-
+      $('.logo').empty();
+      $('.logo').html(logo);
+      
+      //grab the dataTopic attr associated with the button, then run a query search with the value
       var adj = $(this).attr("dataTopic");
       ajaxQuery(adj);
       //end of button on.click function
