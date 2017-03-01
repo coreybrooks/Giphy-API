@@ -13,11 +13,10 @@ for (var i = 0; i < topics.length; i++) {
   $('.buttons').append(btn);
 }
 
-
 //button on.click function attached to the dataTopic class, attached to the buttons
     $(document).on("click", '.giphyButton', function() {
       console.log('giphyButton click is working');
-      $('.instructionsDiv').html('<h3>Click on an image to play or pause the gif<h3>');
+      $('.instructionsDiv').html('<h4>Click on an image to play or pause the gif<h4>');
 
       var adj = $(this).attr("dataTopic");
       ajaxQuery(adj);
@@ -81,14 +80,6 @@ for (var i = 0; i < topics.length; i++) {
         ajaxQuery(adj); 
         //end of search for new adjective function 
       })
-
-
-
-
-
-
-
-
 
 //giphyImage on.click function
     $(document).on('click', '.giphyImage', function() {

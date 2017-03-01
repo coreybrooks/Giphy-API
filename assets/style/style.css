@@ -14,7 +14,7 @@ font-family: 'Roboto', sans-serif;
 }
 
 .header, .instructionsDiv {
-	margin-top: 10px;
+	margin-top: 30px;
 	opacity: 0.9;
 	background: black;
 	text-align: center;
@@ -25,6 +25,11 @@ font-family: 'Roboto', sans-serif;
 
 .heading {
 	font-family: 'Roboto', sans-serif;
+}
+
+.giphyDiv {
+	float: left;
+	margin-right: 20px;
 }
 
 .giphyImage {
@@ -52,4 +57,24 @@ form {
 
 .instructionsDiv {
 	clear: left;
+}
+
+.logo {
+	background-image: url('../images/logo.gif');
+	background-repeat: no-repeat;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+}
+
+.logo2 {
+	background-image: url('../images/logo.gif');
+	background-repeat: no-repeat;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+}
+
+h3 {
+	color: blue;
 }
