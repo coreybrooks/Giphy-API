@@ -26,7 +26,7 @@ for (var i = 0; i < topics.length; i++) {
 //ajaxQuery function to run a giphy query based on the key search word  
     function ajaxQuery(adj) {
       console.log('ajaxQuery function is working');
-      var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         adj + "&api_key=dc6zaTOxFJmzC&limit=10";
 
       $.ajax({
