@@ -2,12 +2,11 @@
 //global variables
 var topics = ['happy', 'sad', 'angry', 'silly', 'nice', 'sarcastic', 'funny', 'crazy', 'mean', 'annoying'];
 var btn;
-var logo = '<img src="assets/images/logo.gif">';
 
 //dynamically create buttons from the topics array
 for (var i = 0; i < topics.length; i++) {
   btn = $('<button>');
-  btn.addClass('btn btn-success giphyButton');
+  btn.addClass('btn btn-primary giphyButton');
   btn.attr('dataTopic', topics[i]);
   btn.text(topics[i]);
 
@@ -17,15 +16,18 @@ for (var i = 0; i < topics.length; i++) {
 //button on.click function attached to the dataTopic class, attached to the buttons
     $(document).on("click", '.giphyButton', function() {
       console.log('giphyButton click is working');
-      $('.instructionsDiv').html('<h4>Click on an image to play or pause the gif<h4>');
-      $('.logo').empty();
-      $('.logo').html(logo);
+      $('.instructionsDiv').html('<h4>Click on an image to play or pause the GIF<h4>');
+
+//change the background of the container to the static giphy image
+      $('.container').attr('style', 'background-image: url(assets/images/giphyImage.jpg)');
+      $('.header').attr('style', 'margin-bottom: 20px');
       
       //grab the dataTopic attr associated with the button, then run a query search with the value
       var adj = $(this).attr("dataTopic");
       ajaxQuery(adj);
       //end of button on.click function
     });
+
 
 //ajaxQuery function to run a giphy query based on the key search word  
     function ajaxQuery(adj) {

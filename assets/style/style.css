@@ -1,13 +1,16 @@
 body {
 font-family: 'Roboto', sans-serif;
+padding-left: 20px;
+padding-right: 20px;
 }
 
 .container {
-	background-image: url('../images/giphyImage.jpg');
+	background-image: url('../images/giphy.gif');
 	width: 100%:;
 	max-width: 1100px;
+	min-height: 400px;
 	margin: auto;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 .btn {
@@ -16,7 +19,6 @@ font-family: 'Roboto', sans-serif;
 }
 
 .header, .instructionsDiv {
-	margin-top: 30px;
 	opacity: 0.9;
 	background: black;
 	text-align: center;
@@ -29,6 +31,10 @@ font-family: 'Roboto', sans-serif;
 	font-family: 'Roboto', sans-serif;
 }
 
+h3 {
+	color: salmon;
+}
+
 .giphyDiv {
 	float: left;
 	margin-right: 20px;
@@ -37,10 +43,16 @@ font-family: 'Roboto', sans-serif;
 .giphyImage {
 	outline: 2px solid #DBDBDB;
 	margin-top: 20px;
+	max-width: 325px;
+	margin-left: 10px;
 }
 .giphyRating {
 	color: white;
 	font-size: 20px;
+}
+
+.giphyButton {
+	background: blueviolet;
 }
 
 .buttons {
@@ -54,15 +66,22 @@ form {
 }
 
 #formInput {
-	outline: 2px solid blue;
+	outline: 2px solid deepskyblue;
 }
 
-.search {
-
+.searchButton {
+	background: mediumspringgreen;
+	font-weight: bold;
 }
 
 .instructionsDiv {
+	margin-top: 30px;
 	clear: left;
+}
+
+.header {
+	margin-top: 40px;
+	margin-bottom: 130px;
 }
 
 .logo {
@@ -81,6 +100,3 @@ form {
 	right: 20px;
 }
 
-h3 {
-	color: blue;
-}
