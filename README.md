@@ -7,6 +7,6 @@ GIPHY API is queried for specific topics through AJAX calls.  The results are re
 
 The page initially displays the static version of the returned GIFs.  Once a static GIF image is clicked, the GIF image becomes animated.  When the image is clicked again, the animated GIF is paused.
 
-This code was uploaded to Heroku and can be viewed here: [coreys-giphy-app](“ https://coreys-giphy-app.herokuapp.com/”)
+This code was uploaded to Heroku and can be viewed here: [coreys-giphy-app](https://coreys-giphy-app.herokuapp.com/)
 
 
