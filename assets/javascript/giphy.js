@@ -13,12 +13,12 @@ for (var i = 0; i < topics.length; i++) {
   $('.buttons').append(btn);
 }
 
-//button on.click function attached to the dataTopic class, attached to the buttons
+    //button on.click function attached to the dataTopic class, attached to the buttons
     $(document).on("click", '.giphyButton', function() {
       console.log('giphyButton click is working');
       $('.instructionsDiv').html('<h4>Click on an image to play or pause the GIF<h4>');
 
-//change the background of the container to the static giphy image
+      //change the background of the container to the static giphy image
       $('.container').attr('style', 'background-image: url(assets/images/giphyImage.jpg)');
       $('.header').attr('style', 'margin-bottom: 20px');
       
@@ -29,7 +29,7 @@ for (var i = 0; i < topics.length; i++) {
     });
 
 
-//ajaxQuery function to run a giphy query based on the key search word  
+    //ajaxQuery function to run a giphy query based on the key search word  
     function ajaxQuery(adj) {
       console.log('ajaxQuery function is working');
       var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
@@ -69,25 +69,25 @@ for (var i = 0; i < topics.length; i++) {
             $(".gifDiv").prepend(gifDiv);
           }
         });
- //end of ajaxQuery function      
+    //end of ajaxQuery function      
     }  
 
- //clear the form value when the input field is focused
+    //clear the form value when the input field is focused
     $('#formInput').on('focus', function() {
       $('#formInput').attr('value', '');
     })
 
-//Search for new adjective function
+      //Search for new adjective function
       $('.searchButton').on('click', function(e) {
         console.log('search click function is working');
         e.preventDefault();
-       var adj = $('#formInput').val().trim();
+        var adj = $('#formInput').val().trim();
         console.log(adj);
         ajaxQuery(adj); 
         //end of search for new adjective function 
       })
 
-//giphyImage on.click function
+    //giphyImage on.click function
     $(document).on('click', '.giphyImage', function() {
       console.log('giphyImage click is working');
       var state = $(this).attr('state');  //set state to the state of the image
@@ -104,5 +104,5 @@ for (var i = 0; i < topics.length; i++) {
             $(this).attr('state', 'still');
           }
 
-//end of giphyImage on.click function
+    //end of giphyImage on.click function
     })
